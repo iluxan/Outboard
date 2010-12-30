@@ -4,5 +4,5 @@ class Document
   field :content
   field :url
   field :author
-  references_one :note
+  references_many :note
 end

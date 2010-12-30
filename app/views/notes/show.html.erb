@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b>Document:</b>
+  <%= Document.where(:_id => @note.document_id).first.title %>
+</p>
+
+<p>
   <b>Content:</b>
   <%= @note.content %>
 </p>
