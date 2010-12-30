@@ -1,4 +1,8 @@
 Outboard::Application.routes.draw do
+  resources :documents
+
+  resources :notes
+
   #get \"users\/show\"
 
   root :to => "home#index"
