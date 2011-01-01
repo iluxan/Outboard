@@ -5,4 +5,5 @@ class Document
   field :url
   field :author
   references_many :note
+  referenced_in :author
 end

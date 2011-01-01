@@ -1,4 +1,6 @@
 Outboard::Application.routes.draw do
+  resources :authors
+
   resources :documents
 
   resources :notes

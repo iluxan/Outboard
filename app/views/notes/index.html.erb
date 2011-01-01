@@ -15,6 +15,7 @@
 <% @notes.each do |note| %>
   <tr>
     <td><%= link_to note.name note %></td>
+    <td><%= Document.where(:_id => note.document_id).first %></td>
     <td><%= note.content %></td>
     <td><%= note.tags %></td>
     <td><%= note.updated_at %></td>
