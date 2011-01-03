@@ -1,6 +1,7 @@
 <h1>Outboard Brain</h1>
 <h3><%= link_to 'Documents', 'documents' %></h3>
 <h3><%= link_to 'Notes', 'notes' %></h3>
+<h3><%= link_to 'Authors', 'authors' %></h3>
 
 <% @users.each do |user| %>
   <p>User: <%=link_to user.name, user %></p>

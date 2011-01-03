@@ -7,11 +7,55 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<ul class="hmenu">
-  <%= link_to('Home', '/') %>
-  <%= render 'devise/menu/registration_items' %>
-  <%= render 'devise/menu/login_items' %>
-</ul>
+  <body id="home"> 
+    <div class="content"> 
+    
+      
+ 
+      <!-- BEGIN: header --> 
+      <div class="headerContainer"> 
+        <div class="header"> 
+	
+      <!-- BEGIN: header --> 
+      <div class="headerContainer"> 
+        <div class="header"> 
+          <div class="branding"> 
+            <a href="/" rel="nofollow"><img src="/images/logo.png" width="200" height="41" border="0" alt="Goodreads" class="logo"/></a> 
+          </div> 
+ 
+          <div class="navigationContainer"> 
+            <div class="navigation"> 
+              <ul class="links"> 
+                  <li> 
+  			<%= render 'devise/menu/login_items' %>
+                  </li>              
+		  <li>
+ 			 <%= render 'devise/menu/registration_items' %>
+		  </li>
+              </ul> 
+            </div> 
+          
+            <ul class="siteNav"> 
+		    <li id="on"><%= link_to('home', '/') %></li>
+		    <li id="on"><%= link_to 'documents', 'documents' %></li>
+		    <li id="on"><%= link_to 'notes', 'notes' %></li>
+		    <li id="on"><%= link_to 'authors', 'authors' %></li>
+            </ul> 
+          
+            <div class="search"> 
+  						<form action="/search/search" method="get" name="headerSearchForm"> 
+              	<input type="hidden" name="search_type" value="books"/> 
+                
+    						<input class="greyText" id="search_query" name="search[query]" onfocus="clearDefaultText(document.headerSearchForm.search_query, 'find books by title or author or isbn'); " size="25" type="text" value="find books by title or author or isbn" /> 
+                <a href="#" onclick="clearDefaultText(document.headerSearchForm.search_query, 'find books by title or author or isbn'); document.headerSearchForm.submit();"><img src="/images/layout/gr_icon_search.gif" width="16" title="find books by title or author or isbn" alt="search"/></a> 
+  						</form> 
+
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <!-- END: header --> 
+
 <p style="color: green"><%= notice %></p>
 <p style="color: red"><%= alert %></p>
 
