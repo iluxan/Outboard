@@ -14,9 +14,10 @@
   </tr>
 
 <% @notes.each do |note| %>
+  <% @doc = note.document_id.nil? ? nil : Document.find(note.document_id) %>
   <tr>
-    <td><%= link_to note.name note %></td>
-    <td><%= Document.where(:_id => note.document_id).first %></td>
+    <td><%= link_to note.name, note %></td>
+    <td><%= !@doc.nil? ? (link_to @doc.title, @doc) : '' %></td>
     <td><%= note.content %></td>
     <td><%= note.tags %></td>
     <td><%= note.updated_at %></td>
