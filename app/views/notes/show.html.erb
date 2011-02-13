@@ -7,7 +7,7 @@
 
 <p>
   <b>Document:</b>
-  <%= Document.where(:_id => @note.document_id).first.title %>
+  <%= link_to @document.title, @document %>
 </p>
 
 <p>

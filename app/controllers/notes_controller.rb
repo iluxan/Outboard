@@ -14,6 +14,8 @@ class NotesController < ApplicationController
   # GET /notes/1.xml
   def show
     @note = Note.find(params[:id])
+		@document = Document.find(@note.document_id)
+		#Document.where(:_id => @note.document_id).first.title 
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,9 +27,25 @@ class NotesController < ApplicationController
   # GET /notes/new.xml
   def new
     @note = Note.new
+    if !params[:document_id].nil?
+			@document = Document.find(params[:document_id])
+		end
+
+
 
     respond_to do |format|
       format.html # new.html.erb
+      format.xml  { render :xml => @note }
+    end
+  end
+
+  # GET /notes/new
+  # GET /notes/new.xml
+  def quick_new
+    @note = Note.new
+
+    respond_to do |format|
+      format.html # quick_new.html.erb
       format.xml  { render :xml => @note }
     end
   end
