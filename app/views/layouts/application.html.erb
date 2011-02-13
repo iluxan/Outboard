@@ -37,12 +37,12 @@
           
             <ul class="siteNav"> 
 		    <li id="on"><%= link_to('home', '/') %></li>
-		    <li id="on"><%= link_to 'documents', 'documents' %></li>
-		    <li id="on"><%= link_to 'notes', 'notes' %></li>
-		    <li id="on"><%= link_to 'authors', 'authors' %></li>
+		    <li id="on"><%= link_to 'documents', '/documents' %></li>
+		    <li id="on"><%= link_to 'notes', '/notes' %></li>
+		    <li id="on"><%= link_to 'authors', '/authors' %></li>
             </ul> 
           
-            <div class="search"> 
+            <div class="search">
   						<form action="/search/search" method="get" name="headerSearchForm"> 
               	<input type="hidden" name="search_type" value="books"/> 
                 

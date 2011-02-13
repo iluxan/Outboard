@@ -7,3 +7,5 @@ ul.hmenu {
 ul.hmenu li {
   display: inline;  
 }
+
+p.content:hover { background: #cc7; }

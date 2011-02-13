@@ -1,3 +1,11 @@
+<script>
+ $(document).ready(function(){
+   $("p.content").click(function(event){
+     alert("Thanks for visiting!");
+   });
+ });
+</script>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +15,7 @@
 
 <p>
   <b>Content:</b>
-  <%= @document.content %>
+  <%= simple_format(@document.content, :class => 'content') %>
 </p>
 
 <p>

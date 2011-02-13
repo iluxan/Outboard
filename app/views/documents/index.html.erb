@@ -12,7 +12,7 @@
 
 <% @documents.each do |document| %>
   <tr>
-    <td><%= document.title %></td>
+    <td><%= link_to document.title, document %></td>
     <td><%= document.url %></td>
     <td><%= document.author %></td>
     <td><%= link_to 'Show', document %></td>

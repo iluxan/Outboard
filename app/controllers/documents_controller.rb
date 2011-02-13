@@ -14,6 +14,7 @@ class DocumentsController < ApplicationController
   # GET /documents/1.xml
   def show
     @document = Document.find(params[:id])
+    @notes = Note.where(:_id => @document.id)
 
     respond_to do |format|
       format.html # show.html.erb
